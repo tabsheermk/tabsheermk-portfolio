@@ -1,26 +1,30 @@
 "use client";
 
-import React from "react";
-import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import SectionHeading from "./section-heading";
 
 export default function About() {
+  const { ref } = useSectionInView({ threshold: 0.75, sectionName: "About" });
+
   return (
     <motion.section
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40"
+      ref={ref}
+      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         delay: 0.175,
       }}
+      id="about"
     >
       <SectionHeading title="About me" />
       <p className="mb-3">
         {" "}
         I will be graduating with a degree in{" "}
-        <span className="font-medium">Computer Science and Engineering</span>, I
-        want to pursue my passion for programming. I am looking for
-        opportunities in the field of{" "}
+        <span className="font-medium">Computer Science and Engineering</span> in
+        June, 2024, I want to pursue my passion for programming. I am looking
+        for opportunities in the field of{" "}
         <span className="font-medium">
           full-stack web development and software engineering
         </span>
