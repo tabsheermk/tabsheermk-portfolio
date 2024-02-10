@@ -1,5 +1,5 @@
-import sageImg from "@/public/corpcomment.png";
-import jotionImg from "@/public/rmtdev.png";
+import sageImg from "@/public/sageImg.png";
+import jotionImg from "@/public/jotionImg.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 
