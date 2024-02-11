@@ -32,7 +32,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduating",
+    title: "Graduation",
     location: "MNRCET, Sangareddy, Telangana",
     description:
       "I will be graduating with a bachelor's degree in Computer Science and Engineering from Jawaharlal Nehru Technological University.",
