@@ -2,6 +2,7 @@ import sageImg from "@/public/sageImg.png";
 import jotionImg from "@/public/jotionImg.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
+import { FaCalculator } from "react-icons/fa";
 
 export const links = [
   {
