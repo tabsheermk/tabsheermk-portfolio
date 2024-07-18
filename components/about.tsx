@@ -21,13 +21,11 @@ export default function About() {
       <SectionHeading title="About me" />
       <p className="mb-3">
         {" "}
-        I will be graduating with a degree in{" "}
-        <span className="font-medium">Computer Science and Engineering</span> in
-        June, 2024, I want to pursue my passion for programming. I am looking
+        I am a graduate with a degree in{" "}
+        <span className="font-medium">Computer Science and Engineering</span>, I want to pursue my passion for programming. I am looking
         for opportunities in the field of{" "}
         <span className="font-medium">
-          full-stack web development and software engineering
-        </span>
+          full-stack web development</span>
         . <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I <span className="underline">love</span> the
         feeling of finally figuring out a solution to a problem. My core stack
