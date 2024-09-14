@@ -9,109 +9,110 @@ import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
-  const { ref } = useSectionInView({ threshold: 0.5, sectionName: "Home" });
+	const { ref } = useSectionInView({ threshold: 0.5, sectionName: "Home" });
 
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+	const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-  return (
-    <section
-      ref={ref}
-      id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
-    >
-      <div className="flex items-center justify-center ">
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              type: "tween",
-            }}
-          >
-            <Image
-              src="/image.jpeg"
-              alt="Tabsheer"
-              width={192}
-              height={192}
-              quality={95}
-              priority={true}
-              className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover
+	return (
+		<section
+			ref={ref}
+			id="home"
+			className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+		>
+			<div className="flex items-center justify-center ">
+				<div className="relative">
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 0.2,
+							type: "tween",
+						}}
+					>
+						<Image
+							src="/image.jpeg"
+							alt="Tabsheer"
+							width={192}
+							height={192}
+							quality={95}
+							priority={true}
+							className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover
              shadow-xl"
-            />
-          </motion.div>
+						/>
+					</motion.div>
 
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 120,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
-        </div>
-      </div>
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5]"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, I am Tabsheer.</span> I am a{" "}
-        <span className="font-bold">computer science student</span> in{" "}
-        <span className="font-bold">final year</span> of CSE. I enjoy building{" "}
-        <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span> and{" "}
-        <span className="underline">Spring</span>. I am also familiar with{" "}
-        <span className="underline">Python (Django)</span>.
-      </motion.h1>
+					<motion.span
+						className="absolute bottom-0 right-0 text-4xl"
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							type: "spring",
+							stiffness: 120,
+							delay: 0.1,
+							duration: 0.7,
+						}}
+					>
+						👋
+					</motion.span>
+				</div>
+			</div>
+			<motion.h1
+				className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5]"
+				initial={{ opacity: 0, y: 100 }}
+				animate={{ opacity: 1, y: 0 }}
+			>
+				<span className="font-bold">Hello, I am Tabsheer.</span> I am a{" "}
+				<span className="font-bold">B.Tech graduate</span> in{" "}
+				<span className="font-bold">CSE</span>. I enjoy building{" "}
+				<span className="italic">sites & apps</span>. My focus is{" "}
+				<span className="underline">React (Next.js)</span> and{" "}
+				<span className="underline">Spring</span>. I am also familiar with{" "}
+				<span className="underline">Python (Django)</span>. I am currently
+				looking for jobs.
+			</motion.h1>
 
-      <motion.div
-        className="flex flex-col sm:flex-row justify-center gap-2 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
-        <a
-          href="/Resume.pdf"
-          download
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-        >
-          Download Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mohd-khaja-tabsheeruddin-540755197/"
-          target="_blank"
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-        >
-          <BsLinkedin />
-        </a>
-        <a
-          href="https://github.com/tabsheermk"
-          target="_blank"
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-        >
-          <BsGithub />
-        </a>
-      </motion.div>
-    </section>
-  );
+			<motion.div
+				className="flex flex-col sm:flex-row justify-center gap-2 px-4 text-lg font-medium"
+				initial={{ opacity: 0, y: 100 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{
+					delay: 0.1,
+				}}
+			>
+				<Link
+					href="#contact"
+					className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+					onClick={() => {
+						setActiveSection("Contact");
+						setTimeOfLastClick(Date.now());
+					}}
+				>
+					Contact me here{" "}
+					<BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+				</Link>
+				<a
+					href="/Resume.pdf"
+					download
+					className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+				>
+					Download Resume{" "}
+					<HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/mohd-khaja-tabsheeruddin-540755197/"
+					target="_blank"
+					className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+				>
+					<BsLinkedin />
+				</a>
+				<a
+					href="https://github.com/tabsheermk"
+					target="_blank"
+					className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+				>
+					<BsGithub />
+				</a>
+			</motion.div>
+		</section>
+	);
 }
